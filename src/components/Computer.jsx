@@ -1,11 +1,15 @@
-export default function Computer(props) {
+export default function Computer({ computorCheating, toggleCheating }) {
+
+console.log(toggleCheating)
+
   return (
     <section className="computer">
       <span
         role="img"
-        className={"cheating"}
+        className={computorCheating ? 'cheating' : ''}
         aria-label="robot"
-    
+        onClick={toggleCheating}
+        data-testid="robot"
       >
         🤖
       </span>

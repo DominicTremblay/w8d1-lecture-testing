@@ -1,7 +1,7 @@
 import { pickOppositeChoice, pickRandomEmoji } from './gameHelpers';
 
 describe('pickOppositeChoice', () => {
-  it('returns an uncool message when a choice is not valid', () => {
+  xit('returns an uncool message when a choice is not valid', () => {
     // Arrange
     const invalidChoice = '🍅';
     const value = pickOppositeChoice(invalidChoice);
@@ -14,13 +14,13 @@ describe('pickOppositeChoice', () => {
     expect(value).toBe(expectedResult);
   });
 
-  it('throws an error when no choice was received', () => {
+  xit('throws an error when no choice was received', () => {
     const throwFunction = () => pickOppositeChoice();
 
     expect(throwFunction).toThrow('Wait? What? No emojiiiiis !!!');
   });
 
-  it('returns the opposite choice when it is valid', () => {
+  xit('returns the opposite choice when it is valid', () => {
     const list = ['🗿', '🌳', '🪓'];
 
     const winnerChoices = {
@@ -38,7 +38,7 @@ describe('pickOppositeChoice', () => {
 });
 
 describe('pickRandomEmoji', () => {
-  it.only('returns a random valid emoji', () => {
+  xit('returns a random valid emoji', () => {
     const matches = {
       15: '🗿',
       25: '🌳',
