@@ -1,10 +1,12 @@
-export default function Computer(props) {
+export default function Computer({computerCheating, toggleCheat}) {
   return (
     <section className="computer">
       <span
         role="img"
-        className={"cheating"}
+        className={computerCheating ? "cheating" : ''}
         aria-label="robot"
+        data-testid = 'robot'
+        onClick={toggleCheat}
     
       >
         🤖
