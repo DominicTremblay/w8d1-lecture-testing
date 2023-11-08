@@ -1,13 +1,11 @@
 export default function Computer(props) {
-  const { computerCheating, toggleCheating } = props;
   return (
     <section className="computer">
       <span
         role="img"
-        className={computerCheating ? "cheating" : ""}
+        className={"cheating"}
         aria-label="robot"
-        onClick={toggleCheating}
-        data-testid="robot"
+    
       >
         🤖
       </span>
